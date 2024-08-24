@@ -1,0 +1,12 @@
+modules = ["php-8.2", "nodejs-19", "web", "php-8.1"]
+run = "php public_html/index.php"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "php public_html/index.php"]
+
+[[ports]]
+localPort = 8000
+externalPort = 80
